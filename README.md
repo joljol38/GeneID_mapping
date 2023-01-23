@@ -6,7 +6,7 @@ Developing GeneID mapping website
 /chromosome
 각 chromosome 별로 mapping된 tsv파일
 
-ex. chr1_map_fin.tsv column별
+ex) chr1_map_fin.tsv
 GeneID : Entrez ID
 Symbol : Gene Symbol
 EnsemblID
