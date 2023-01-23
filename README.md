@@ -10,13 +10,14 @@
    - 각 relation 별로 mapping된 tsv file
 
 
-2. all_gene_mapping2.tsv
+   / all_gene_mapping2.tsv
+   - all GeneID mapping data
+   
+   / feature_result_fin.tsv
 
-3. feature_result_fin.tsv
-
-4. website
+2. website
    - html files
 
-5. data_mapping_percent.xlsx
+3. data_mapping_percent.xlsx
 
    - 각 데이터 column별 개수 및 mapping percent 계산한 excel file
