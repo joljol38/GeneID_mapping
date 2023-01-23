@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="dna.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Human Gene IDs</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Modernizer JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<!-- tableScroller CSS -->
+<link rel="stylesheet" href="css/tableScroller.css">
+<!-- tableScroller JS -->
+<script src="js/tableScroller.js"></script>
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css">
+
+	
+    <!-- external css -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./tableScroller.css">
+	
+    <!-- internal css -->
+	<style>
+	
+	 body{
+		font-family: "Roboto,Helvetica Neue",Helvetica,Arial,sans-serif; 
+	 }
+	 
+	 #container{
+		 margin-top: 20px;
+		 margin-left:50px;
+		 position:relative;
+	 }
+
+	#menu{
+		 padding-top: 20px;
+		 padding-left:20px;
+	 }
+	 
+	h5 {
+		color: #2e44b9;
+		font-weight: bold;
+		font-size: 18px;;
+	}
+	
+	/* ---------- */
+
+a.btn-back:hover {
+	background-image: linear-gradient(to bottom,#ccc 0,#ddd 100%);
+}
+
+a.btn-back {
+	font-family: Tahoma, Calibri, Arial, sans-serif;
+	color : grey;
+	border-radius: 4px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	padding: 4px 8px 4px 8px;
+	margin:4px;
+	background-image: linear-gradient(to bottom,#fff 0,#eee 100%);
+}
+
+input[type=radio] {
+	font-size: 11px;
+	cursor: pointer;
+}
+
+	input[type=radio]:before {
+		background: white;
+		border: 2px solid #337ab7;
+		border-radius: 50%;
+		margin-top: -2px;
+		margin-right: 6px;
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		width: 14px;
+		height: 14px;
+	}
+
+	input[type=radio]:checked:before {
+		background: #337ab7;
+		border-color: #337ab7;
+		box-shadow: inset 0px 0px 0px 2px #fff;
+	}
+	.choices{
+		display:inline-block;
+		margin-right:40px;
+	}
+	
+	.choices label{
+		font-weight:normal;
+		margin-left:4px;
+		margin-right:4px;
+		vertical-align:8%;
+	}
+	
+	.nice-group{
+		width:680px;
+		line-height: 16px;
+		padding:10px;
+		border:1px solid #ccc;
+		background-color:#fff
+		
+	}
+	.nice-group legend {
+		color: #337ab7;
+		width:120px;
+		font-size:14px !important;
+		border-bottom:none;
+		
+	}
+
+	</style>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+        <div class="container">
+          <div class="menu-bg-wrap">
+            <div class="site-navigation">
+              <a href="index.html" class="logo m-0 float-start">Human Gene IDs</a>
+  
+              <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="has-children">
+                <a href = "genetype.html">Gene Types</a>
+                <ul class="dropdown">
+                  <li class = "has-children">
+                    <a href="biological_region.html">biological-region</a>
+                    <ul class="dropdown">
+                      <li><a href="misc_feature.html">misc_feature</a></li>
+                      <li><a href="misc_recomb.html">misc_recomb</a></li>
+                      <li><a href="regulatory.html">regulatory</a></li>    
+                    </ul>
+
+                  </li>
+                  <li><a href="protein_coding.html">protein-coding</a></li>
+                  <li><a href="pseudo.html">pseudo</a></li>
+                  <li><a href="rRNA.html">rRNA</a></li>
+                  <li><a href="ncRNA.html">ncRNA</a></li>
+                  <li><a href="scRNA.html">scRNA</a></li>
+                  <li><a href="snoRNA.html">snoRNA</a></li>
+                  <li><a href="snRNA.html">snRNA</a></li>
+                  <li><a href="tRNA.html">tRNA</a></li>
+                  <li><a href="other.html">other</a></li>
+                  <li><a href="unknown.html">unknown</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href = "chromosome.html">Chromosome Types</a>
+                <ul class="dropdown">
+                  <li><a href="autosome.html">Autosome</a></li>
+                  <li><a href="allosome.html">Allosome</a></li>  
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href = "relationtype.html">Relation Types</a>
+                <ul class="dropdown">
+                  <li><a href="prs.html">Potential Readthrough Sibling</a></li>
+                  <li><a href="child.html">Readthrough Child</a></li>
+                  <li><a href="parent.html">Readthrough Parent</a></li>
+                  <li><a href="sibling.html">Readthrough Sibling</a></li>
+                  <li><a href="member.html">Region Member</a></li>
+                  <li><a href="rparent.html">Region Parent</a></li>
+                  <li><a href="fgene.html">Related Functional Gene</a></li>
+                  <li><a href="pseudo_gene.html">Related Pseudogene</a></li>
+                  
+                </ul>
+              </li>
+
+              <li><a href="download.html">Downloads</a></li>
+              <!--<li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>-->
+            </ul>
+  
+              <a
+                href="#"
+                class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+                data-toggle="collapse"
+                data-target="#main-navbar"
+              >
+                <span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div
+      class="hero page-inner overlay"
+      style="background-image: url('images/background3.jpg')"
+    >
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <header>
+                  <h1 class = "heading"> Unknown </h1>
+                  <table class="table table-bordered">
+                    <thead>
+                      <tr 
+                        class ="table-light">
+                          <th scope="col"></th>
+                          <th scope="col">Gene ID</th>
+                          <th scope="col">Gene Symbol</th>
+                          <th scope="col">Ensembl ID</th>
+                          <th scope="col">HGNC ID</th>
+                          <th scope="col">MIM Number</th>
+                          <th scope="col">Uniprot Accession ID</th>
+                          <th scope="col">Uniprot ID</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class = "table-light">
+                        <th scope="row">#</th>
+                        <td>252</td>
+                        <td>250(99.2%)</td>
+                        <td>1(0.8%)</td>
+                        <td>23(9.5%)</td>
+                        <td>14(6%)</td>
+                        <td>4(1.6%)</td>
+                        <td>4(1.6%)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </header>
+                <!-- <h1 class="heading" >Autosome</h1> -->
+
+                <!-- <nav
+                aria-label="breadcrumb"
+                data-aos-delay="200"
+                > -->
+                <!-- <ol class="breadcrumb text-center justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li
+                    class="breadcrumb-item active text-white-50"
+                    aria-current="page"
+                    >
+                    Chromosome Types
+                    </li>
+                </ol> -->
+                </nav>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("tableScroller");
+        tr = table.getElementsByTagName("tr");
+      
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 1; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[1];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      </script>
+	
+    <!-- Search query datatable
+      <div class="form-outline mb-4">
+      <input type="search" class="form-control" id="datatable-search-input">
+      <label class="form-label" for="datatable-search-input">Search</label>
+    </div>
+    <div id="datatable">
+    </div> -->
+
+    <div id="container" style="width:90%;">
+      
+    <div class="input-group mb-3" style = "width:30%">
+      <input type="search" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for Gene ID">
+    </div>
+    <table id="tableScroller" class="table table-striped table-bordered table-responsive-md">
+	<thead>
+	<tr>
+		<th data-prop="chr#" data-way="up">Chr#</th>
+    <th data-prop="GeneID" data-way="up">Gene ID</th>
+		<th data-prop="Symbol" data-way="up">Gene Symbol</th>
+		<th data-prop="EnsemblID"  data-way="up">Ensembl ID</th>
+		<th data-prop="HGNCID" data-way="up">HGNC ID</th>
+		<th data-prop="MIM Number"  data-way="up">MIM Number</th>
+    <th data-prop="UniprotAC"  data-way="up">Uniprot Accession ID</th>
+    <th data-prop="UniprotID"  data-way="up">Uniprot ID</th>
+    <!-- <th data-prop="type_of_gene"  data-way="up">Type of gene</th> -->
+		<!-- <th data-prop="useit"  data-way="up">I use it</th> -->
+	</tr>
+	</thead>
+	<tbody></tbody>
+	</table>
+	
+     <!-- <div id="enlarger" style="width:300px;padding:10px;">
+		<label for="containerWidth">parent div width (<span>90%</span>)</label>
+	    <input type="range" value="90" list="tickmarks" id="containerWidth" min="30" max="90">
+		<datalist id="tickmarks">
+		  <option value="30">
+		  <option value="40">
+		  <option value="50">
+		  <option value="60">
+		  <option value="70">
+		  <option value="80">
+		  <option value="90">
+		</datalist>
+	 </div> -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="./js/tableScroller.js"></script>
+
+	  
+<script>  
+  let data = [{"chr#":1,"GeneID":1243,"Symbol":"CMM","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":1689,"Symbol":"DFNA7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":2728,"Symbol":"GLC3B","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":5765,"Symbol":"PTOS1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":6022,"Symbol":"RMD1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":6298,"Symbol":"SAI1","EnsemblID":null,"HGNCID":null,"MIM Number":154280.0,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7446,"Symbol":"AVSD1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7488,"Symbol":"WS2B","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7792,"Symbol":"CCV","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7795,"Symbol":"MEMO1","EnsemblID":null,"HGNCID":null,"MIM Number":601201.0,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7808,"Symbol":"AIR","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7824,"Symbol":"D1S111","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7830,"Symbol":"PHA2A","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":7834,"Symbol":"PCAP","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":10306,"Symbol":"CTPP","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":10547,"Symbol":"PSORS4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":53368,"Symbol":"MDC1B","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":54109,"Symbol":"CORD8","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":54113,"Symbol":"VUR","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":57042,"Symbol":"IBD7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":59331,"Symbol":"RFH1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":64585,"Symbol":"BOS2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":65245,"Symbol":"PSORS7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":79052,"Symbol":"PTCPRN","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":85504,"Symbol":"BDET","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":93983,"Symbol":"DYT13","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":117192,"Symbol":"MNRI","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":170534,"Symbol":"PARK10","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":171513,"Symbol":"PAOD1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":171514,"Symbol":"ANON1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":246259,"Symbol":"BMND3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":260415,"Symbol":"SCASI","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":317664,"Symbol":"DFNA49","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":317773,"Symbol":"MGR6","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":338027,"Symbol":"BMND2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":373071,"Symbol":"AIS1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":406237,"Symbol":"PDON2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":406874,"Symbol":"DYX8","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":449015,"Symbol":"ASPG3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":449483,"Symbol":"DFNB45","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":474388,"Symbol":"CMM4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":497657,"Symbol":"ANIB3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":619379,"Symbol":"SPG29","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":619408,"Symbol":"PSNP2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":619488,"Symbol":"SCZD12","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":641433,"Symbol":"RP32","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":780905,"Symbol":"EA3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":791121,"Symbol":"SHFL1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100009675,"Symbol":"MRT4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100037265,"Symbol":"STQTL7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100048905,"Symbol":"GBD2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100048906,"Symbol":"GBD3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100188754,"Symbol":"AD14","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100188820,"Symbol":"AUTS11","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100188823,"Symbol":"ASRT4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100188837,"Symbol":"AD13","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100190982,"Symbol":"POROK5","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100196914,"Symbol":"ALPQTL2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100217370,"Symbol":"DEL1Q21","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100217371,"Symbol":"DUP1Q21","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100240733,"Symbol":"IBD23","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100240737,"Symbol":"DEL1P36","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100271696,"Symbol":"MS4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100271922,"Symbol":"BFIS4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100294718,"Symbol":"BMND14","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100301522,"Symbol":"CELIAC7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100302560,"Symbol":"MUHH2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100302718,"Symbol":"B6QTL1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100303717,"Symbol":"PBC3","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100306939,"Symbol":"NBLST6","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100307118,"Symbol":"BCC1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100307119,"Symbol":"BCC2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100312952,"Symbol":"PVOP1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100322878,"Symbol":"SLEB14","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100359403,"Symbol":"PARK16","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100359407,"Symbol":"MYP14","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100379199,"Symbol":"HRM2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100379215,"Symbol":"QTV","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100505728,"Symbol":"LOC100505728","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100529222,"Symbol":"STQTL23","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100529224,"Symbol":"FWS","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100529231,"Symbol":"MACST","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100529242,"Symbol":"DEL1Q41Q42","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100653367,"Symbol":"OFC13","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100653373,"Symbol":"KONDS","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100653377,"Symbol":"SPGF2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100689213,"Symbol":"GFND1","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100861440,"Symbol":"DFNB96","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":100996935,"Symbol":"UAQTL6","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":101055624,"Symbol":"NYS7","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":101241898,"Symbol":"KAZA2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":101290499,"Symbol":"OPHLC","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":102723100,"Symbol":"OTSC10","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":103581096,"Symbol":"OFC14","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":103753527,"Symbol":"SCA37","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":104326187,"Symbol":"EA8","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":105463127,"Symbol":"PFHB2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":112499599,"Symbol":"C1DELP35","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":117204004,"Symbol":"C1DUPP36.33","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":1,"GeneID":123670537,"Symbol":"DEL1P36","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":2,"GeneID":425,"Symbol":"ARVD4","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null},
+  {"chr#":2,"GeneID":1257,"Symbol":"CNC2","EnsemblID":null,"HGNCID":null,"MIM Number":null,"UniprotAC":null,"UniprotID":null}];
+
+let myTable = $("#tableScroller").tableScroller("init",{"data":data,"options":{"tbodyHeight":"400px"}});
+
+$("#containerWidth").on("change",function(){
+	let percentage = $(this).val()+"%";
+	$("#container").css("width",percentage);
+	$("#enlarger span").text(percentage);
+	myTable.tableScroller("update",percentage);
+});
+	 </script>  
+</html>

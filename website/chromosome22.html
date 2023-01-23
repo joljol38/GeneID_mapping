@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="dna.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Human Gene IDs</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<!-- Modernizer JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<!-- tableScroller CSS -->
+<link rel="stylesheet" href="css/tableScroller.css">
+<!-- tableScroller JS -->
+<script src="js/tableScroller.js"></script>
+	<!-- Demo CSS -->
+	<link rel="stylesheet" href="css/demo.css">
+
+	
+    <!-- external css -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,500">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./tableScroller.css">
+	
+    <!-- internal css -->
+	<style>
+	
+	 body{
+		font-family: "Roboto,Helvetica Neue",Helvetica,Arial,sans-serif; 
+	 }
+	 
+	 #container{
+		 margin-top: 20px;
+		 margin-left:50px;
+		 position:relative;
+	 }
+
+	#menu{
+		 padding-top: 20px;
+		 padding-left:20px;
+	 }
+	 
+	h5 {
+		color: #2e44b9;
+		font-weight: bold;
+		font-size: 18px;;
+	}
+	
+	/* ---------- */
+
+a.btn-back:hover {
+	background-image: linear-gradient(to bottom,#ccc 0,#ddd 100%);
+}
+
+a.btn-back {
+	font-family: Tahoma, Calibri, Arial, sans-serif;
+	color : grey;
+	border-radius: 4px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	padding: 4px 8px 4px 8px;
+	margin:4px;
+	background-image: linear-gradient(to bottom,#fff 0,#eee 100%);
+}
+
+input[type=radio] {
+	font-size: 11px;
+	cursor: pointer;
+}
+
+	input[type=radio]:before {
+		background: white;
+		border: 2px solid #337ab7;
+		border-radius: 50%;
+		margin-top: -2px;
+		margin-right: 6px;
+		display: inline-block;
+		vertical-align: middle;
+		content: '';
+		width: 14px;
+		height: 14px;
+	}
+
+	input[type=radio]:checked:before {
+		background: #337ab7;
+		border-color: #337ab7;
+		box-shadow: inset 0px 0px 0px 2px #fff;
+	}
+	.choices{
+		display:inline-block;
+		margin-right:40px;
+	}
+	
+	.choices label{
+		font-weight:normal;
+		margin-left:4px;
+		margin-right:4px;
+		vertical-align:8%;
+	}
+	
+	.nice-group{
+		width:680px;
+		line-height: 16px;
+		padding:10px;
+		border:1px solid #ccc;
+		background-color:#fff
+		
+	}
+	.nice-group legend {
+		color: #337ab7;
+		width:120px;
+		font-size:14px !important;
+		border-bottom:none;
+		
+	}
+
+	</style>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close">
+            <span class="icofont-close js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+        <div class="container">
+          <div class="menu-bg-wrap">
+            <div class="site-navigation">
+              <a href="index.html" class="logo m-0 float-start">Human Gene IDs</a>
+  
+              <ul
+              class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+            >
+              <li class="active"><a href="index.html">Home</a></li>
+              <li class="has-children">
+                <a href = "genetype.html">Gene Types</a>
+                <ul class="dropdown">
+                  <li class = "has-children">
+                    <a href="biological_region.html">biological-region</a>
+                    <ul class="dropdown">
+                      <li><a href="misc_feature.html">misc_feature</a></li>
+                      <li><a href="misc_recomb.html">misc_recomb</a></li>
+                      <li><a href="regulatory.html">regulatory</a></li>    
+                    </ul>
+
+                  </li>
+                  <li><a href="protein_coding.html">protein-coding</a></li>
+                  <li><a href="pseudo.html">pseudo</a></li>
+                  <li><a href="rRNA.html">rRNA</a></li>
+                  <li><a href="ncRNA.html">ncRNA</a></li>
+                  <li><a href="scRNA.html">scRNA</a></li>
+                  <li><a href="snoRNA.html">snoRNA</a></li>
+                  <li><a href="snRNA.html">snRNA</a></li>
+                  <li><a href="tRNA.html">tRNA</a></li>
+                  <li><a href="other.html">other</a></li>
+                  <li><a href="unknown.html">unknown</a></li>
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href = "chromosome.html">Chromosome Types</a>
+                <ul class="dropdown">
+                  <li><a href="autosome.html">Autosome</a></li>
+                  <li><a href="allosome.html">Allosome</a></li>  
+                </ul>
+              </li>
+              <li class="has-children">
+                <a href = "relationtype.html">Relation Types</a>
+                <ul class="dropdown">
+                  <li><a href="prs.html">Potential Readthrough Sibling</a></li>
+                  <li><a href="child.html">Readthrough Child</a></li>
+                  <li><a href="parent.html">Readthrough Parent</a></li>
+                  <li><a href="sibling.html">Readthrough Sibling</a></li>
+                  <li><a href="member.html">Region Member</a></li>
+                  <li><a href="rparent.html">Region Parent</a></li>
+                  <li><a href="fgene.html">Related Functional Gene</a></li>
+                  <li><a href="pseudo_gene.html">Related Pseudogene</a></li>
+                  
+                </ul>
+              </li>
+
+              <li><a href="download.html">Downloads</a></li>
+              <!--<li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact Us</a></li>-->
+            </ul>
+  
+              <a
+                href="#"
+                class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+                data-toggle="collapse"
+                data-target="#main-navbar"
+              >
+                <span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div
+      class="hero page-inner overlay"
+      style="background-image: url('images/background3.jpg')"
+    >
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+            <div class="col-lg-9 text-center mt-5">
+                <header>
+                <h1 class = "heading"> Chromosome 22 </h1>
+                <table class="table table-bordered">
+                  <thead>
+                    <tr 
+                      class ="table-light">
+                        <th scope="col"></th>
+                        <th scope="col">Gene ID</th>
+                        <th scope="col">Gene Symbol</th>
+                        <th scope="col">Ensembl ID</th>
+                        <th scope="col">HGNC ID</th>
+                        <th scope="col">MIM Number</th>
+                        <th scope="col">Uniprot Accession ID</th>
+                        <th scope="col">Uniprot ID</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class = "table-light">
+                      <th scope="row">#</th>
+                      <td>1,864</td>
+                      <td>1,864(100%)</td>
+                      <td>781(41.9%)</td>
+                      <td>997(53.5%)</td>
+                      <td>395(21.2%)</td>
+                      <td>421(22.6%)</td>
+                      <td>421(22.6%)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </header>
+                <!-- <h1 class="heading" >Autosome</h1> -->
+
+                <!-- <nav
+                aria-label="breadcrumb"
+                data-aos-delay="200"
+                > -->
+                <!-- <ol class="breadcrumb text-center justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li
+                    class="breadcrumb-item active text-white-50"
+                    aria-current="page"
+                    >
+                    Chromosome Types
+                    </li>
+                </ol> -->
+                </nav>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("tableScroller");
+        tr = table.getElementsByTagName("tr");
+      
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+          td = tr[i].getElementsByTagName("td")[0];
+          if (td) {
+            txtValue = td.textContent || td.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              tr[i].style.display = "";
+            } else {
+              tr[i].style.display = "none";
+            }
+          }
+        }
+      }
+      </script>
+	
+
+    <div id="container" style="width:90%;">
+      <div class="input-group mb-3" style = "width:30%">
+        <input type="search" id="myInput" onkeyup="myFunction()" class="form-control" placeholder="Search for Gene ID">
+      </div>
+    <!-- <h5>A little plugin to demonstrate how to add a scroll to an html table</h5>
+	<div style="margin-bottom:10px;">The width of the table is determined by the width of its parent : try to change the width of the parent container</div> -->
+    <table id="tableScroller" class="table table-striped table-bordered table-responsive-md">
+	<thead>
+	<tr>
+		<th data-prop="GeneID" data-way="up">Gene ID</th>
+		<th data-prop="Symbol" data-way="up">Symbol</th>
+		<th data-prop="EnsemblID"  data-way="up">Ensembl ID</th>
+		<th data-prop="HGNCID" data-way="up">HGNC ID</th>
+		<th data-prop="MIM Number"  data-way="up">MIM Number</th>
+    <th data-prop="UniprotAC"  data-way="up">Uniprot Accession ID</th>
+    <th data-prop="UniprotID"  data-way="up">Uniprot ID</th>
+    <th data-prop="type_of_gene"  data-way="up">Type of gene</th>
+		<!-- <th data-prop="useit"  data-way="up">I use it</th> -->
+	</tr>
+	</thead>
+	<tbody></tbody>
+	</table>
+	
+     <!-- <div id="enlarger" style="width:300px;padding:10px;">
+		<label for="containerWidth">parent div width (<span>90%</span>)</label>
+	    <input type="range" value="90" list="tickmarks" id="containerWidth" min="30" max="90">
+		<datalist id="tickmarks">
+		  <option value="30">
+		  <option value="40">
+		  <option value="50">
+		  <option value="60">
+		  <option value="70">
+		  <option value="80">
+		  <option value="90">
+		</datalist>
+	 </div> -->
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="./js/tableScroller.js"></script>
+
+	  
+<script>  
+  let data = [{"GeneID":49,"Symbol":"ACR","EnsemblID":"ENSG00000100312","HGNCID":126,"MIM Number":102480,"UniprotAC":"P10323","UniprotID":"ACRO","type_of_gene":"protein-coding"},
+  {"GeneID":50,"Symbol":"ACO2","EnsemblID":"ENSG00000100412","HGNCID":118,"MIM Number":100850,"UniprotAC":"Q99798","UniprotID":"ACON","type_of_gene":"protein-coding"},
+  {"GeneID":135,"Symbol":"ADORA2A","EnsemblID":"ENSG00000128271","HGNCID":263,"MIM Number":102776,"UniprotAC":"P29274","UniprotID":"AA2AR","type_of_gene":"protein-coding"},
+  {"GeneID":157,"Symbol":"GRK3","EnsemblID":"ENSG00000100077","HGNCID":290,"MIM Number":109636,"UniprotAC":"P35626","UniprotID":"ARBK2","type_of_gene":"protein-coding"},
+  {"GeneID":158,"Symbol":"ADSL","EnsemblID":"ENSG00000239900","HGNCID":291,"MIM Number":608222,"UniprotAC":"P30566","UniprotID":"PUR8","type_of_gene":"protein-coding"},
+  {"GeneID":162,"Symbol":"AP1B1","EnsemblID":"ENSG00000100280","HGNCID":554,"MIM Number":600157,"UniprotAC":"Q10567","UniprotID":"AP1B1","type_of_gene":"protein-coding"},
+  {"GeneID":410,"Symbol":"ARSA","EnsemblID":"ENSG00000100299","HGNCID":713,"MIM Number":607574,"UniprotAC":"P15289","UniprotID":"ARSA","type_of_gene":"protein-coding"},
+  {"GeneID":421,"Symbol":"ARVCF","EnsemblID":"ENSG00000099889","HGNCID":728,"MIM Number":602269,"UniprotAC":"O00192","UniprotID":"ARVC","type_of_gene":"protein-coding"},
+  {"GeneID":436,"Symbol":"ASLP1","EnsemblID":"","HGNCID":747,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":468,"Symbol":"ATF4","EnsemblID":"ENSG00000128272","HGNCID":786,"MIM Number":604064,"UniprotAC":"P18848","UniprotID":"ATF4","type_of_gene":"protein-coding"},
+  {"GeneID":529,"Symbol":"ATP6V1E1","EnsemblID":"ENSG00000131100","HGNCID":857,"MIM Number":108746,"UniprotAC":"P36543","UniprotID":"VATE1","type_of_gene":"protein-coding"},
+  {"GeneID":613,"Symbol":"BCR","EnsemblID":"ENSG00000186716","HGNCID":1014,"MIM Number":151410,"UniprotAC":"P11274","UniprotID":"BCR","type_of_gene":"protein-coding"},
+  {"GeneID":616,"Symbol":"BCRP4","EnsemblID":"ENSG00000215456","HGNCID":1017,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":637,"Symbol":"BID","EnsemblID":"ENSG00000015475","HGNCID":1050,"MIM Number":601997,"UniprotAC":"P55957","UniprotID":"BID","type_of_gene":"protein-coding"},
+  {"GeneID":638,"Symbol":"BIK","EnsemblID":"ENSG00000100290","HGNCID":1051,"MIM Number":603392,"UniprotAC":"Q13323","UniprotID":"BIK","type_of_gene":"protein-coding"},
+  {"GeneID":706,"Symbol":"TSPO","EnsemblID":"ENSG00000100300","HGNCID":1158,"MIM Number":109610,"UniprotAC":"P30536","UniprotID":"TSPO","type_of_gene":"protein-coding"},
+  {"GeneID":758,"Symbol":"MPPED1","EnsemblID":"ENSG00000186732","HGNCID":1306,"MIM Number":602112,"UniprotAC":"O15442","UniprotID":"MPPD1","type_of_gene":"protein-coding"},
+  {"GeneID":1055,"Symbol":"CECR","EnsemblID":"","HGNCID":1838,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":1120,"Symbol":"CHKB","EnsemblID":"ENSG00000100288","HGNCID":1938,"MIM Number":612395,"UniprotAC":"Q9Y259","UniprotID":"CHKB","type_of_gene":"protein-coding"},
+  {"GeneID":1312,"Symbol":"COMT","EnsemblID":"ENSG00000093010","HGNCID":2228,"MIM Number":null,"UniprotAC":"P21964","UniprotID":"COMT","type_of_gene":"protein-coding"},
+  {"GeneID":1336,"Symbol":"COX5BP7","EnsemblID":"","HGNCID":2276,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":1343,"Symbol":"COX6B1P3","EnsemblID":"","HGNCID":2283,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":1375,"Symbol":"CPT1B","EnsemblID":"ENSG00000205560","HGNCID":2329,"MIM Number":601987,"UniprotAC":"Q92523","UniprotID":"CPT1B","type_of_gene":"protein-coding"},
+  {"GeneID":1399,"Symbol":"CRKL","EnsemblID":"ENSG00000099942","HGNCID":2363,"MIM Number":602007,"UniprotAC":"P46109","UniprotID":"CRKL","type_of_gene":"protein-coding"},
+  {"GeneID":1413,"Symbol":"CRYBA4","EnsemblID":"ENSG00000196431","HGNCID":2396,"MIM Number":123631,"UniprotAC":"P53673","UniprotID":"CRBA4","type_of_gene":"protein-coding"},
+  {"GeneID":1414,"Symbol":"CRYBB1","EnsemblID":"ENSG00000100122","HGNCID":2397,"MIM Number":600929,"UniprotAC":"P53674","UniprotID":"CRBB1","type_of_gene":"protein-coding"},
+  {"GeneID":1415,"Symbol":"CRYBB2","EnsemblID":"ENSG00000244752","HGNCID":2398,"MIM Number":123620,"UniprotAC":"P43320","UniprotID":"CRBB2","type_of_gene":"protein-coding"},
+  {"GeneID":1416,"Symbol":"CRYBB2P1","EnsemblID":"ENSG00000291087","HGNCID":2399,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":1417,"Symbol":"CRYBB3","EnsemblID":"ENSG00000100053","HGNCID":2400,"MIM Number":123630,"UniprotAC":"P26998","UniprotID":"CRBB3","type_of_gene":"protein-coding"},
+  {"GeneID":1439,"Symbol":"CSF2RB","EnsemblID":"ENSG00000100368","HGNCID":2436,"MIM Number":138981,"UniprotAC":"P32927","UniprotID":"IL3RB","type_of_gene":"protein-coding"},
+  {"GeneID":1454,"Symbol":"CSNK1E","EnsemblID":"ENSG00000213923","HGNCID":2453,"MIM Number":600863,"UniprotAC":"","UniprotID":"","type_of_gene":"protein-coding"},
+  {"GeneID":1564,"Symbol":"CYP2D7","EnsemblID":"","HGNCID":2624,"MIM Number":null,"UniprotAC":"A0A087X1C5","UniprotID":"CP2D7","type_of_gene":"protein-coding"},
+  {"GeneID":1565,"Symbol":"CYP2D6","EnsemblID":"ENSG00000100197","HGNCID":2625,"MIM Number":124030,"UniprotAC":"P10635","UniprotID":"CP2D6","type_of_gene":"protein-coding"},
+  {"GeneID":1566,"Symbol":"CYP2D7BP","EnsemblID":"","HGNCID":null,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":1568,"Symbol":"CYP2D8P","EnsemblID":"ENSG00000226450","HGNCID":2628,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":1652,"Symbol":"DDT","EnsemblID":"ENSG00000099977","HGNCID":2732,"MIM Number":602750,"UniprotAC":"P30046","UniprotID":"DOPD","type_of_gene":"protein-coding"},
+  {"GeneID":1714,"Symbol":"DGCR","EnsemblID":"","HGNCID":2844,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":1727,"Symbol":"CYB5R3","EnsemblID":"ENSG00000100243","HGNCID":2873,"MIM Number":613213,"UniprotAC":"P00387","UniprotID":"NB5R3","type_of_gene":"protein-coding"},
+  {"GeneID":1890,"Symbol":"TYMP","EnsemblID":"ENSG00000025708","HGNCID":3148,"MIM Number":131222,"UniprotAC":"P19971","UniprotID":"TYPH","type_of_gene":"protein-coding"},
+  {"GeneID":2033,"Symbol":"EP300","EnsemblID":"ENSG00000100393","HGNCID":3373,"MIM Number":602700,"UniprotAC":"Q09472","UniprotID":"EP300","type_of_gene":"protein-coding"},
+  {"GeneID":2130,"Symbol":"EWSR1","EnsemblID":"ENSG00000182944","HGNCID":3508,"MIM Number":133450,"UniprotAC":"Q01844","UniprotID":"EWS","type_of_gene":"protein-coding"},
+  {"GeneID":2192,"Symbol":"FBLN1","EnsemblID":"ENSG00000077942","HGNCID":3600,"MIM Number":135820,"UniprotAC":"P23142","UniprotID":"FBLN1","type_of_gene":"protein-coding"},
+  {"GeneID":2473,"Symbol":"FRA22A","EnsemblID":"","HGNCID":3883,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":2474,"Symbol":"FRA22B","EnsemblID":"","HGNCID":3884,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":2547,"Symbol":"XRCC6","EnsemblID":"ENSG00000196419","HGNCID":4055,"MIM Number":152690,"UniprotAC":"P12956","UniprotID":"XRCC6","type_of_gene":"protein-coding"},
+  {"GeneID":2678,"Symbol":"GGT1","EnsemblID":"ENSG00000100031","HGNCID":4250,"MIM Number":612346,"UniprotAC":"P19440","UniprotID":"GGT1","type_of_gene":"protein-coding"},
+  {"GeneID":2679,"Symbol":"GGT3P","EnsemblID":"ENSG00000197421","HGNCID":4252,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":2687,"Symbol":"GGT5","EnsemblID":"ENSG00000099998","HGNCID":4260,"MIM Number":137168,"UniprotAC":"P36269","UniprotID":"GGT5","type_of_gene":"protein-coding"},
+  {"GeneID":2781,"Symbol":"GNAZ","EnsemblID":"ENSG00000128266","HGNCID":4395,"MIM Number":139160,"UniprotAC":"P19086","UniprotID":"GNAZ","type_of_gene":"protein-coding"},
+  {"GeneID":2812,"Symbol":"GP1BB","EnsemblID":"ENSG00000203618","HGNCID":4440,"MIM Number":138720,"UniprotAC":"P13224","UniprotID":"GP1BB","type_of_gene":"protein-coding"},
+  {"GeneID":2847,"Symbol":"MCHR1","EnsemblID":"ENSG00000128285","HGNCID":4479,"MIM Number":601751,"UniprotAC":"Q99705","UniprotID":"MCHR1","type_of_gene":"protein-coding"},
+  {"GeneID":2928,"Symbol":"GSC2","EnsemblID":"ENSG00000063515","HGNCID":4613,"MIM Number":601845,"UniprotAC":"O15499","UniprotID":"GSC2","type_of_gene":"protein-coding"},
+  {"GeneID":2952,"Symbol":"GSTT1","EnsemblID":"","HGNCID":4641,"MIM Number":600436,"UniprotAC":"P30711","UniprotID":"GSTT1","type_of_gene":"protein-coding"},
+  {"GeneID":2953,"Symbol":"GSTT2","EnsemblID":"ENSG00000099984","HGNCID":4642,"MIM Number":600437,"UniprotAC":"P0CG29","UniprotID":"GST2","type_of_gene":"protein-coding"},
+  {"GeneID":3005,"Symbol":"H1-0","EnsemblID":"ENSG00000189060","HGNCID":4714,"MIM Number":142708,"UniprotAC":"P07305","UniprotID":"H10","type_of_gene":"protein-coding"},
+  {"GeneID":3053,"Symbol":"SERPIND1","EnsemblID":"ENSG00000099937","HGNCID":4838,"MIM Number":142360,"UniprotAC":"P05546","UniprotID":"HEP2","type_of_gene":"protein-coding"},
+  {"GeneID":3162,"Symbol":"HMOX1","EnsemblID":"ENSG00000100292","HGNCID":5013,"MIM Number":141250,"UniprotAC":"P09601","UniprotID":"HMOX1","type_of_gene":"protein-coding"},
+  {"GeneID":3527,"Symbol":"IGKV3OR22-2","EnsemblID":"ENSG00000254264","HGNCID":5833,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3529,"Symbol":"IGKV2OR22-3","EnsemblID":"","HGNCID":5812,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3530,"Symbol":"IGKV1OR22-1","EnsemblID":"","HGNCID":5772,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3535,"Symbol":"IGL","EnsemblID":"","HGNCID":5853,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"protein-coding"},
+  {"GeneID":3537,"Symbol":"IGLC1","EnsemblID":"ENSG00000211675","HGNCID":5855,"MIM Number":147220,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":3538,"Symbol":"IGLC2","EnsemblID":"ENSG00000211677","HGNCID":5856,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":3539,"Symbol":"IGLC3","EnsemblID":"ENSG00000211679","HGNCID":5857,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":3540,"Symbol":"IGLC4","EnsemblID":"ENSG00000254029","HGNCID":5858,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3541,"Symbol":"IGLC5","EnsemblID":"ENSG00000254030","HGNCID":5859,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3542,"Symbol":"IGLC6","EnsemblID":"ENSG00000222037","HGNCID":5860,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3543,"Symbol":"IGLL1","EnsemblID":"ENSG00000128322","HGNCID":5870,"MIM Number":146770,"UniprotAC":"P15814","UniprotID":"IGLL1","type_of_gene":"protein-coding"},
+  {"GeneID":3544,"Symbol":"IGLL2P","EnsemblID":"","HGNCID":5871,"MIM Number":null,"UniprotAC":"","UniprotID":"","type_of_gene":"pseudo"},
+  {"GeneID":3546,"Symbol":"IGLV@","EnsemblID":"","HGNCID":null,"MIM Number":147240,"UniprotAC":"","UniprotID":"","type_of_gene":"other"},
+  {"GeneID":3560,"Symbol":"IL2RB","EnsemblID":"ENSG00000100385","HGNCID":6009,"MIM Number":146710,"UniprotAC":"P14784","UniprotID":"IL2RB","type_of_gene":"protein-coding"},
+  {"GeneID":3761,"Symbol":"KCNJ4","EnsemblID":"ENSG00000168135","HGNCID":6265,"MIM Number":600504,"UniprotAC":"P48050","UniprotID":"KCNJ4","type_of_gene":"protein-coding"},
+  {"GeneID":3956,"Symbol":"LGALS1","EnsemblID":"ENSG00000100097","HGNCID":6561,"MIM Number":150570,"UniprotAC":"P09382","UniprotID":"LEG1","type_of_gene":"protein-coding"},
+  {"GeneID":3957,"Symbol":"LGALS2","EnsemblID":"ENSG00000100079","HGNCID":6562,"MIM Number":150571,"UniprotAC":"P05162","UniprotID":"LEG2","type_of_gene":"protein-coding"},
+  {"GeneID":3976,"Symbol":"LIF","EnsemblID":"ENSG00000128342","HGNCID":6596,"MIM Number":159540,"UniprotAC":"P15018","UniprotID":"LIF","type_of_gene":"protein-coding"},
+  {"GeneID":3985,"Symbol":"LIMK2","EnsemblID":"ENSG00000182541","HGNCID":6614,"MIM Number":601988,"UniprotAC":"P53671","UniprotID":"LIMK2","type_of_gene":"protein-coding"},
+  {"GeneID":4151,"Symbol":"MB","EnsemblID":"ENSG00000198125","HGNCID":6915,"MIM Number":160000,"UniprotAC":"P02144","UniprotID":"MYG","type_of_gene":"protein-coding"},
+  {"GeneID":4174,"Symbol":"MCM5","EnsemblID":"ENSG00000100297","HGNCID":6948,"MIM Number":602696,"UniprotAC":"P33992","UniprotID":"MCM5","type_of_gene":"protein-coding"},
+  {"GeneID":4242,"Symbol":"MFNG","EnsemblID":"ENSG00000100060","HGNCID":7038,"MIM Number":602577,"UniprotAC":"O00587","UniprotID":"MFNG","type_of_gene":"protein-coding"},
+  {"GeneID":4248,"Symbol":"MGAT3","EnsemblID":"ENSG00000128268","HGNCID":7046,"MIM Number":604621,"UniprotAC":"Q09327","UniprotID":"MGAT3","type_of_gene":"protein-coding"},
+  {"GeneID":4282,"Symbol":"MIF","EnsemblID":"ENSG00000240972","HGNCID":7097,"MIM Number":153620,"UniprotAC":"P14174","UniprotID":"MIF","type_of_gene":"protein-coding"},
+  {"GeneID":4320,"Symbol":"MMP11","EnsemblID":"ENSG00000099953","HGNCID":7157,"MIM Number":185261,"UniprotAC":"P24347","UniprotID":"MMP11","type_of_gene":"protein-coding"},
+  {"GeneID":4330,"Symbol":"MN1","EnsemblID":"ENSG00000169184","HGNCID":7180,"MIM Number":156100,"UniprotAC":"Q10571","UniprotID":"MN1","type_of_gene":"protein-coding"},
+  {"GeneID":4357,"Symbol":"MPST","EnsemblID":"ENSG00000128309","HGNCID":7223,"MIM Number":602496,"UniprotAC":"P25325","UniprotID":"THTM","type_of_gene":"protein-coding"},
+  {"GeneID":4627,"Symbol":"MYH9","EnsemblID":"ENSG00000100345","HGNCID":7579,"MIM Number":160775,"UniprotAC":"P35579","UniprotID":"MYH9","type_of_gene":"protein-coding"},
+  {"GeneID":4668,"Symbol":"NAGA","EnsemblID":"ENSG00000198951","HGNCID":7631,"MIM Number":104170,"UniprotAC":"P17050","UniprotID":"NAGAB","type_of_gene":"protein-coding"},
+  {"GeneID":4689,"Symbol":"NCF4","EnsemblID":"ENSG00000100365","HGNCID":7662,"MIM Number":601488,"UniprotAC":"Q15080","UniprotID":"NCF4","type_of_gene":"protein-coding"},
+  {"GeneID":4700,"Symbol":"NDUFA6","EnsemblID":"ENSG00000184983","HGNCID":7690,"MIM Number":602138,"UniprotAC":"P56556","UniprotID":"NDUA6","type_of_gene":"protein-coding"},
+  {"GeneID":4733,"Symbol":"DRG1","EnsemblID":"ENSG00000185721","HGNCID":3029,"MIM Number":603952,"UniprotAC":"Q9Y295","UniprotID":"DRG1","type_of_gene":"protein-coding"},
+  {"GeneID":4744,"Symbol":"NEFH","EnsemblID":"ENSG00000100285","HGNCID":7737,"MIM Number":162230,"UniprotAC":"P12036","UniprotID":"NFH","type_of_gene":"protein-coding"},
+  {"GeneID":4771,"Symbol":"NF2","EnsemblID":"ENSG00000186575","HGNCID":7773,"MIM Number":607379,"UniprotAC":"P35240","UniprotID":"MERL","type_of_gene":"protein-coding"},
+  {"GeneID":4809,"Symbol":"SNU13","EnsemblID":"ENSG00000100138","HGNCID":7819,"MIM Number":601304,"UniprotAC":"P55769","UniprotID":"NH2L1","type_of_gene":"protein-coding"},
+  {"GeneID":5008,"Symbol":"OSM","EnsemblID":"ENSG00000099985","HGNCID":8506,"MIM Number":165095,"UniprotAC":"P13725","UniprotID":"ONCM","type_of_gene":"protein-coding"},
+  {"GeneID":5155,"Symbol":"PDGFB","EnsemblID":"ENSG00000100311","HGNCID":8800,"MIM Number":190040,"UniprotAC":"P01127","UniprotID":"PDGFB","type_of_gene":"protein-coding"},
+  {"GeneID":5297,"Symbol":"PI4KA","EnsemblID":"ENSG00000241973","HGNCID":8983,"MIM Number":600286,"UniprotAC":"P42356","UniprotID":"PI4KA","type_of_gene":"protein-coding"},
+  {"GeneID":5372,"Symbol":"PMM1","EnsemblID":"ENSG00000100417","HGNCID":9114,"MIM Number":601786,"UniprotAC":"Q92871","UniprotID":"PMM1","type_of_gene":"protein-coding"},
+  {"GeneID":5413,"Symbol":"SEPTIN5","EnsemblID":"ENSG00000184702","HGNCID":9164,"MIM Number":602724,"UniprotAC":"Q99719","UniprotID":"SEPT5","type_of_gene":"protein-coding"},
+  {"GeneID":5435,"Symbol":"POLR2F","EnsemblID":"ENSG00000100142","HGNCID":9193,"MIM Number":604414,"UniprotAC":"P61218","UniprotID":"RPAB2","type_of_gene":"protein-coding"},
+  {"GeneID":5465,"Symbol":"PPARA","EnsemblID":"ENSG00000186951","HGNCID":9232,"MIM Number":null,"UniprotAC":"Q07869","UniprotID":"PPARA","type_of_gene":"protein-coding"},
+  {"GeneID":5594,"Symbol":"MAPK1","EnsemblID":"ENSG00000100030","HGNCID":6871,"MIM Number":176948,"UniprotAC":"P28482","UniprotID":"MK01","type_of_gene":"protein-coding"}];
+let myTable = $("#tableScroller").tableScroller("init",{"data":data,"options":{"tbodyHeight":"400px"}});
+
+$("#containerWidth").on("change",function(){
+	let percentage = $(this).val()+"%";
+	$("#container").css("width",percentage);
+	$("#enlarger span").text(percentage);
+	myTable.tableScroller("update",percentage);
+});
+	 </script>  
+</html>

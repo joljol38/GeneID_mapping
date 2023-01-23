@@ -1,0 +1,290 @@
+<!-- /*
+* Template Name: Property
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Untree.co" />
+    <link rel="shortcut icon" href="dna.png" />
+
+    <meta name="description" content="" />
+    <meta name="keywords" content="bootstrap, bootstrap5" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css" />
+
+    <link rel="stylesheet" href="css/tiny-slider.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="../json/test.json" type="text/javascript"></script>
+    <title>
+      Human Gene IDs
+    </title>
+  </head>
+  <body>
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close">
+          <span class="icofont-close js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <div class="menu-bg-wrap">
+          <div class="site-navigation">
+            <a href="index.html" class="logo m-0 float-start">Human Gene IDs</a>
+
+            <ul
+            class="js-clone-nav d-none d-lg-inline-block text-start site-menu float-end"
+          >
+            <li class="active"><a href="index.html">Home</a></li>
+            <li class="has-children">
+              <a href = "genetype.html">Gene Types</a>
+              <ul class="dropdown">
+                <li class = "has-children">
+                  <a href="biological_region.html">biological-region</a>
+                  <ul class="dropdown">
+                    <li><a href="misc_feature.html">misc_feature</a></li>
+                    <li><a href="misc_recomb.html">misc_recomb</a></li>
+                    <li><a href="regulatory.html">regulatory</a></li>    
+                  </ul>
+                </li>
+                <li><a href="protein_coding.html">protein-coding</a></li>
+                <li><a href="pseudo.html">pseudo</a></li>
+                <li><a href="rRNA.html">rRNA</a></li>
+                <li><a href="ncRNA.html">ncRNA</a></li>
+                <li><a href="scRNA.html">scRNA</a></li>
+                <li><a href="snoRNA.html">snoRNA</a></li>
+                <li><a href="snRNA.html">snRNA</a></li>
+                <li><a href="tRNA.html">tRNA</a></li>
+                <li><a href="other.html">other</a></li>
+                <li><a href="unknown.html">unknown</a></li>
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href = "chromosome.html">Chromosome Types</a>
+              <ul class="dropdown">
+                <li><a href="autosome.html">Autosome</a></li>
+                <li><a href="allosome.html">Allosome</a></li>  
+              </ul>
+            </li>
+            <li class="has-children">
+              <a href = "relationtype.html">Relation Types</a>
+              <ul class="dropdown">
+                <li><a href="prs.html">Potential Readthrough Sibling</a></li>
+                <li><a href="child.html">Readthrough Child</a></li>
+                <li><a href="parent.html">Readthrough Parent</a></li>
+                <li><a href="sibling.html">Readthrough Sibling</a></li>
+                <li><a href="member.html">Region Member</a></li>
+                <li><a href="rparent.html">Region Parent</a></li>
+                <li><a href="fgene.html">Related Functional Gene</a></li>
+                <li><a href="pseudo_gene.html">Related Pseudogene</a></li>
+                
+              </ul>
+            </li>
+
+            <li><a href="download.html">Downloads</a></li>
+            <!--<li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>-->
+          </ul>
+
+            <a
+              href="#"
+              class="burger light me-auto float-end mt-1 site-menu-toggle js-menu-toggle d-inline-block d-lg-none"
+              data-toggle="collapse"
+              data-target="#main-navbar"
+            >
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="hero-slide">
+        <div
+          class="img overlay"
+          style="background-image: url('./images/background3.jpg')"
+        ></div>
+
+      </div>
+<!--
+      <div class="container">
+        <h1 class="heading" data-aos="fade-up">
+          Enter your gene list
+        </h1>
+
+        <form
+              action="#"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <input
+                type="text"
+                class="form-control px-4"
+                placeholder="Your ZIP code or City. e.g. New York"
+              />
+              <p class="detail">
+                Select your gene ID type
+              </p>
+              <div class="iden1">
+                <select name="identifier">
+                  <option>Entrez&nbsp;gene ID</option>
+                  <option>Ensemble gene ID</option>
+                  <option>Ensemble&nbsp;transcripts ID</option>
+                  <option>Gene Symbol</option>
+                  <option>RefSeq</option>
+                </select>
+              </div>
+              <p class="detail">
+                Select gene ID type you want
+              </p>
+              <select name="identifier">
+                <option>Entrez&nbsp;gene ID</option>
+                <option>Ensemble gene ID</option>
+                <option>Ensemble&nbsp;transcripts ID</option>
+                <option>Gene Symbol</option>
+                <option>RefSeq</option>
+              </select>
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+      </div>
+    -->
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-lg-12 text-center">
+            <h1 class="heading">
+              SUMMARY
+            </h1>
+
+            <div class="container">
+              <div class="row justify-content-center align-items-center">
+              <div class="col-lg-12 text-center mt-0">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr 
+                          class ="table-light">
+                            <th scope="col"></th>
+                            <th scope="col">Gene ID</th>
+                            <th scope="col">Symbol</th>
+                            <th scope="col">Ensembl ID</th>
+                            <th scope="col">HGNC ID</th>
+                            <th scope="col">MIM Number</th>
+                            <th scope="col">Uniprot Accession ID</th>
+                            <th scope="col">Uniprot ID</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class = "table-light">
+                          <th scope="row">#</th>
+                          <td>125,031</td>
+                          <td>124,933(99.9%)</td>
+                          <td>36,269(29%)</td>
+                          <td>43,311(34.6%)</td>
+                          <td>16,757(13.4%)</td>
+                          <td>18,797(15%)</td>
+                          <td>18,797(15%)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    
+                </div>
+              </div>
+          </div>
+
+          
+
+            <!-- <form
+              action="#"
+              class="narrow-w form-search d-flex align-items-stretch mb-3"
+              data-aos-delay="200"
+            >
+              <input
+                type="text"
+                class="form-control px-4"
+                placeholder="Gene ID"
+              />-->
+
+              <!-- <div class="iden1">
+                <select name="identifier">
+                  <option>Entrez&nbsp;gene ID</option>
+                  <option>Ensemble gene ID</option>
+                  <option>Ensemble&nbsp;transcripts ID</option>
+                  <option>Gene Symbol</option>
+                  <option>RefSeq</option>
+                </select>
+              </div>
+              
+              <select name="identifier" class="identifier2">
+                <option>Entrez&nbsp;gene ID</option>
+                <option>Ensemble gene ID</option>
+                <option>Ensemble&nbsp;transcripts ID</option>
+                <option>Gene Symbol</option>
+                <option>RefSeq</option>
+              </select>-->
+              <!--<button type="submit" class="btn btn-primary">Search</button>-->
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+  
+  
+  </section>
+  
+    <div class="site-footer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            
+
+            <p>
+              Hankuk University of Foreign Studies, Biomedical Engineering
+            </p>
+            <div>
+              Developed by joljol
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+      <div class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/tiny-slider.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/counter.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
