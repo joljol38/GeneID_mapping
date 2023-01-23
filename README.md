@@ -1,5 +1,5 @@
 # GeneID_mapping
-Developing GeneID mapping website
+* Developing GeneID mapping website
 
 1. mapping_data
 
