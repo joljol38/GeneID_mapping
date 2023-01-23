@@ -1,0 +1,15 @@
+table th{
+    cursor:pointer;
+    user-select: none;
+    table-layout : fixed;
+}
+
+ table th[data-way]:after{
+    content: "\f0dc";
+    font-family: 'Font Awesome 5 Free';
+    float:right;
+    table-layout:fixed;
+}
+
+		
+		
